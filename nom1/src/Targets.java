@@ -15,8 +15,8 @@ public class Targets
     }
     public boolean Shot(double x, double y)
     {
-        double target_x = shoot_number * distance;
-        double distance_sq = Math.pow(x - target_x, 2) + Math.pow(y, 2);
+        double target_location = shoot_number * distance;
+        double distance_sq = Math.pow(x - target_location, 2) + Math.pow(y, 2);
         double radius_sq = radius * radius;
         shoot_number++;
         boolean hit = distance_sq <= radius_sq;

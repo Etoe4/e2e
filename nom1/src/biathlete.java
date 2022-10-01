@@ -11,11 +11,12 @@
 *   }
 *    targets.Hits()
 * */
+// main programm
 public class biathlete {
     public static void main(String[] args)
     {
-        double x;
-        double y;
+        double x;   //axis x
+        double y;   //axis y
         double target_count = 5;
         double distance_between_targets = 25;
         double target_radius = 10;
@@ -24,16 +25,15 @@ public class biathlete {
         Scan input = new Scan();
 
         System.out.println("You are biathlete, time to shot targets");
-        for (int i = 0; i < target_count; i++)
+        for (int shot = 0; shot < target_count; shot++) // target shooting
         {
-            System.out.println(i + 1 + " target");
+            System.out.println(shot + 1 + " target"); // number target
 
             System.out.print("x = ");
-            x = input.XY();
+            x = input.double_var();
 
             System.out.print("y = ");
-            y = input.XY();
-
+            y = input.double_var();
 
             if (targets.Shot(x, y))
             {

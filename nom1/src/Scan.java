@@ -1,26 +1,15 @@
 import java.util.Scanner;
-
-public class Scan {
-    double x2;
-    public double XY()
+public class Scan { // input function
+    public double double_var()
     {
-        for (int i = 0; i < 1; i++) {
-            try {
+        Scanner input = new Scanner(System.in);
+        try {
+            return input.nextInt();
 
-
-                Scanner input = new Scanner(System.in);
-
-                x2 = input.nextInt();
-
-            } catch (Exception e) {
-                System.out.println("try another input");
-                i--;
-
-
-            }
-
+        } catch (java.util.InputMismatchException e) {
+            System.out.println("You need input a number");
+            double_var();
         }
-        return x2;
-
+        return 0;
     }
 }
